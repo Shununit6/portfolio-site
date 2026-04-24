@@ -380,8 +380,9 @@ main {
   .hero { padding: 56px 0 48px; }
   .hero__meta { margin-bottom: 24px; row-gap: 4px; }
   .hero__meta > :nth-child(n+4) { display: none; }
-  .hero__tagline { font-size: 18px; line-height: 1.5; }
-  .lead { font-size: 19px; line-height: 1.45; }
+  .hero__tagline { font-size: 17px; line-height: 1.5; overflow-wrap: anywhere; }
+  .lead { font-size: 18px; line-height: 1.45; overflow-wrap: anywhere; }
+  .feature__body p, .entry__dek { overflow-wrap: anywhere; }
 
   .feature { padding: 48px 0; }
   .feature--contact { padding-bottom: 64px; }
