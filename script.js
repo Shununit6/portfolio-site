@@ -69,8 +69,11 @@
       t.classList.toggle('is-active', t.getAttribute('href') === id);
     });
   };
+  let userScrolled = window.scrollY > 50;
+  window.addEventListener('scroll', () => { userScrolled = true; }, { passive: true });
   const tabObserver = new IntersectionObserver(
     (entries) => {
+      if (!userScrolled) return;
       entries.forEach((e) => {
         if (e.isIntersecting) setActive('#' + e.target.id);
       });
