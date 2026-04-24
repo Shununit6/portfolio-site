@@ -3,51 +3,67 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a1a3f" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#c8e4ff" media="(prefers-color-scheme: light)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
-    <title>Your Name — Portfolio</title>
+    <title>✨ Your Name — Portfolio</title>
     <meta name="description" content="Personal portfolio of Your Name." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:wght@500;700;800&family=Inter:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
+    <div class="orbs" aria-hidden="true">
+      <span class="orb orb--1"></span>
+      <span class="orb orb--2"></span>
+      <span class="orb orb--3"></span>
+      <span class="orb orb--4"></span>
+    </div>
+
     <header class="nav">
-      <a class="nav__brand" href="#top">YN</a>
+      <a class="nav__brand" href="#top">
+        <span class="brand__dot"></span>
+        <span class="brand__text">your name</span>
+      </a>
       <nav class="nav__links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
+        <a href="#about">about</a>
+        <a href="#projects">projects</a>
+        <a href="#contact">contact</a>
       </nav>
       <button id="themeToggle" class="nav__theme" aria-label="Toggle theme">
-        <span class="nav__theme-icon">◐</span>
+        <span class="nav__theme-icon">☾</span>
       </button>
     </header>
 
     <main id="top">
       <section class="hero">
-        <p class="hero__eyebrow">Hello, I'm</p>
+        <div class="iridescent" aria-hidden="true"></div>
+        <p class="hero__eyebrow">✨ hello, i'm</p>
         <h1 class="hero__name">Your Name</h1>
         <p class="hero__tagline">
-          Software engineer building
-          <span class="hero__accent">thoughtful, reliable</span> web apps.
+          software engineer building
+          <span class="hero__accent">thoughtful</span>,
+          <span class="hero__accent hero__accent--alt">reliable</span> web apps
+          <span class="hero__sparkle">💿</span>
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">See my work</a>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          <a class="btn btn--primary" href="#projects">see my work →</a>
+          <a class="btn btn--ghost" href="#contact">get in touch</a>
         </div>
       </section>
 
       <section id="about" class="section">
-        <h2 class="section__title">About</h2>
+        <p class="section__eyebrow">◌ about</p>
         <div class="about">
-          <p>
-            I'm a developer who cares about the details — clean code, good UX,
-            and shipping things that actually work. Write a couple of
-            sentences here about what you do, what you're into, and what
-            you're looking for.
+          <p class="about__lead">
+            I'm a developer who cares about the details — clean code, good UX, and shipping things that actually work.
+          </p>
+          <p class="about__body">
+            Write a couple of sentences here about what you do, what you're into, and what you're looking for.
           </p>
           <ul class="chips">
             <li>JavaScript</li>
@@ -61,64 +77,66 @@
       </section>
 
       <section id="projects" class="section">
-        <h2 class="section__title">Projects</h2>
+        <p class="section__eyebrow">◌ projects</p>
         <div class="projects">
           <article class="card">
+            <div class="card__badge">01</div>
             <h3 class="card__title">Project One</h3>
             <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
+              Short description of what the project does and what problem it solves. One or two sentences is plenty.
             </p>
             <p class="card__meta">React · Node · PostgreSQL</p>
             <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
+              <a href="#">live ↗</a>
+              <a href="#">code ↗</a>
             </div>
           </article>
 
           <article class="card">
+            <div class="card__badge">02</div>
             <h3 class="card__title">Project Two</h3>
             <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
+              Short description of what the project does and what problem it solves. One or two sentences is plenty.
             </p>
             <p class="card__meta">TypeScript · Next.js</p>
             <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
+              <a href="#">live ↗</a>
+              <a href="#">code ↗</a>
             </div>
           </article>
 
           <article class="card">
+            <div class="card__badge">03</div>
             <h3 class="card__title">Project Three</h3>
             <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
+              Short description of what the project does and what problem it solves. One or two sentences is plenty.
             </p>
             <p class="card__meta">Python · FastAPI</p>
             <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
+              <a href="#">live ↗</a>
+              <a href="#">code ↗</a>
             </div>
           </article>
         </div>
       </section>
 
       <section id="contact" class="section section--contact">
-        <h2 class="section__title">Contact</h2>
-        <p class="contact__lead">
-          Best way to reach me is email. I usually reply within a day.
-        </p>
-        <div class="contact__links">
-          <a href="mailto:you@example.com">you@example.com</a>
-          <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
+        <p class="section__eyebrow">◌ contact</p>
+        <div class="contact-card">
+          <p class="contact__lead">
+            Best way to reach me is email. I usually reply within a day 🌸
+          </p>
+          <div class="contact__links">
+            <a class="pill" href="mailto:shununit6@gmail.com">✉ shununit6@gmail.com</a>
+            <a class="pill" href="https://github.com/Shununit6" target="_blank" rel="noopener">⌨ GitHub</a>
+            <a class="pill" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">◈ LinkedIn</a>
+          </div>
         </div>
       </section>
     </main>
 
     <footer class="footer">
-      <p>© <span id="year"></span> Your Name</p>
+      <p>© <span id="year"></span> Your Name · made with ✨</p>
     </footer>
 
     <script src="script.js"></script>

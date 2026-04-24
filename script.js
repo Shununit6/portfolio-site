@@ -30,4 +30,17 @@
     { rootMargin: '0px 0px -10% 0px', threshold: 0.08 }
   );
   targets.forEach((el) => io.observe(el));
+
+  // Gentle parallax on orbs following mouse
+  const orbs = document.querySelectorAll('.orb');
+  if (orbs.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    window.addEventListener('pointermove', (e) => {
+      const x = (e.clientX / window.innerWidth - 0.5) * 2;
+      const y = (e.clientY / window.innerHeight - 0.5) * 2;
+      orbs.forEach((orb, i) => {
+        const depth = (i + 1) * 6;
+        orb.style.translate = `${x * depth}px ${y * depth}px`;
+      });
+    }, { passive: true });
+  }
 })();
