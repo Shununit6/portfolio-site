@@ -3,123 +3,151 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#1e1e2e" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#eff1f5" media="(prefers-color-scheme: light)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
-    <title>Your Name — Portfolio</title>
-    <meta name="description" content="Personal portfolio of Your Name." />
+    <title>shun@portfolio: ~</title>
+    <meta name="description" content="Terminal-style portfolio of Shun." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700&display=swap" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="nav">
-      <a class="nav__brand" href="#top">YN</a>
-      <nav class="nav__links">
-        <a href="#about">About</a>
-        <a href="#projects">Projects</a>
-        <a href="#contact">Contact</a>
-      </nav>
-      <button id="themeToggle" class="nav__theme" aria-label="Toggle theme">
-        <span class="nav__theme-icon">◐</span>
-      </button>
+    <header class="titlebar">
+      <div class="titlebar__dots" aria-hidden="true">
+        <span class="dot dot--r"></span>
+        <span class="dot dot--y"></span>
+        <span class="dot dot--g"></span>
+      </div>
+      <div class="titlebar__title">shun@portfolio: ~/your-name — -zsh</div>
+      <div class="titlebar__right">
+        <button id="cmdkToggle" class="kbd-btn" title="Command palette">
+          <kbd>⌘</kbd><kbd>K</kbd>
+        </button>
+        <button id="themeToggle" class="kbd-btn" aria-label="Toggle theme">◐</button>
+      </div>
     </header>
+
+    <nav class="tabs" aria-label="Sections">
+      <a href="#about" class="tab">about.md</a>
+      <a href="#projects" class="tab">projects/</a>
+      <a href="#contact" class="tab">contact.txt</a>
+    </nav>
 
     <main id="top">
       <section class="hero">
-        <p class="hero__eyebrow">Hello, I'm</p>
-        <h1 class="hero__name">Your Name</h1>
+        <p class="prompt">
+          <span class="p-user">shun</span><span class="p-at">@</span><span class="p-host">portfolio</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sep">$ </span><span class="p-cmd">whoami</span>
+        </p>
+        <h1 class="hero__name" id="heroName">Your Name<span class="cursor" aria-hidden="true"></span></h1>
         <p class="hero__tagline">
-          Software engineer building
-          <span class="hero__accent">thoughtful, reliable</span> web apps.
+          <span class="comment"># software engineer — building</span><br />
+          <span class="comment"># <span class="accent">thoughtful</span>, <span class="accent">reliable</span> web apps</span>
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">See my work</a>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          <a class="btn" href="#projects"><span class="chevron">❯</span> cd ~/projects</a>
+          <a class="btn btn--ghost" href="#contact"><span class="chevron">❯</span> mail -s "hi"</a>
         </div>
       </section>
+
+      <div class="rule"><span class="rule__label">ABOUT</span></div>
 
       <section id="about" class="section">
-        <h2 class="section__title">About</h2>
-        <div class="about">
-          <p>
-            I'm a developer who cares about the details — clean code, good UX,
-            and shipping things that actually work. Write a couple of
-            sentences here about what you do, what you're into, and what
-            you're looking for.
-          </p>
-          <ul class="chips">
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Python</li>
-            <li>PostgreSQL</li>
-          </ul>
+        <p class="prompt">
+          <span class="p-user">shun</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sep">$ </span><span class="p-cmd">cat</span> <span class="fname">about.md</span>
+        </p>
+        <div class="md-block">
+          <p>I'm a developer who cares about the details — clean code, good UX, and shipping things that actually work. Write a couple of sentences here about what you do, what you're into, and what you're looking for.</p>
         </div>
+        <p class="prompt">
+          <span class="p-user">shun</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sep">$ </span><span class="p-cmd">echo</span> <span class="str">"$SKILLS"</span>
+        </p>
+        <ul class="skills">
+          <li><span class="br">[</span>JavaScript<span class="br">]</span></li>
+          <li><span class="br">[</span>TypeScript<span class="br">]</span></li>
+          <li><span class="br">[</span>React<span class="br">]</span></li>
+          <li><span class="br">[</span>Node.js<span class="br">]</span></li>
+          <li><span class="br">[</span>Python<span class="br">]</span></li>
+          <li><span class="br">[</span>PostgreSQL<span class="br">]</span></li>
+        </ul>
       </section>
+
+      <div class="rule"><span class="rule__label">PROJECTS</span></div>
 
       <section id="projects" class="section">
-        <h2 class="section__title">Projects</h2>
-        <div class="projects">
-          <article class="card">
-            <h3 class="card__title">Project One</h3>
-            <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
-            </p>
-            <p class="card__meta">React · Node · PostgreSQL</p>
-            <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
+        <p class="prompt">
+          <span class="p-user">shun</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sep">$ </span><span class="p-cmd">tree</span> <span class="fname">~/projects</span>
+        </p>
+        <div class="tree">
+          <p class="tree__root"><span class="fname">~/projects/</span></p>
+
+          <article class="tree__node">
+            <p class="tree__head"><span class="br-line">├── </span><span class="fname fname--dir">project-one/</span></p>
+            <p class="tree__line"><span class="br-line">│   ├── </span><span class="key">README</span>   <span class="p-sep">»</span> Short description of what the project does and what problem it solves.</p>
+            <p class="tree__line"><span class="br-line">│   ├── </span><span class="key">stack</span>    <span class="p-sep">»</span> React · Node · PostgreSQL</p>
+            <p class="tree__line"><span class="br-line">│   └── </span><span class="key">links</span>    <span class="p-sep">»</span> <a href="#">live</a> · <a href="#">source</a></p>
           </article>
 
-          <article class="card">
-            <h3 class="card__title">Project Two</h3>
-            <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
-            </p>
-            <p class="card__meta">TypeScript · Next.js</p>
-            <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
+          <article class="tree__node">
+            <p class="tree__head"><span class="br-line">├── </span><span class="fname fname--dir">project-two/</span></p>
+            <p class="tree__line"><span class="br-line">│   ├── </span><span class="key">README</span>   <span class="p-sep">»</span> Short description of what the project does and what problem it solves.</p>
+            <p class="tree__line"><span class="br-line">│   ├── </span><span class="key">stack</span>    <span class="p-sep">»</span> TypeScript · Next.js</p>
+            <p class="tree__line"><span class="br-line">│   └── </span><span class="key">links</span>    <span class="p-sep">»</span> <a href="#">live</a> · <a href="#">source</a></p>
           </article>
 
-          <article class="card">
-            <h3 class="card__title">Project Three</h3>
-            <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
-            </p>
-            <p class="card__meta">Python · FastAPI</p>
-            <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
+          <article class="tree__node">
+            <p class="tree__head"><span class="br-line">└── </span><span class="fname fname--dir">project-three/</span></p>
+            <p class="tree__line"><span class="br-line">    ├── </span><span class="key">README</span>   <span class="p-sep">»</span> Short description of what the project does and what problem it solves.</p>
+            <p class="tree__line"><span class="br-line">    ├── </span><span class="key">stack</span>    <span class="p-sep">»</span> Python · FastAPI</p>
+            <p class="tree__line"><span class="br-line">    └── </span><span class="key">links</span>    <span class="p-sep">»</span> <a href="#">live</a> · <a href="#">source</a></p>
           </article>
         </div>
       </section>
 
+      <div class="rule"><span class="rule__label">CONTACT</span></div>
+
       <section id="contact" class="section section--contact">
-        <h2 class="section__title">Contact</h2>
-        <p class="contact__lead">
-          Best way to reach me is email. I usually reply within a day.
+        <p class="prompt">
+          <span class="p-user">shun</span><span class="p-sep">:</span><span class="p-path">~</span><span class="p-sep">$ </span><span class="p-cmd">cat</span> <span class="fname">contact.txt</span>
         </p>
-        <div class="contact__links">
-          <a href="mailto:you@example.com">you@example.com</a>
-          <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
-        </div>
+        <ul class="contact">
+          <li><span class="key">email   </span><span class="p-sep">=</span> <a href="mailto:shununit6@gmail.com">shununit6@gmail.com</a></li>
+          <li><span class="key">github  </span><span class="p-sep">=</span> <a href="https://github.com/Shununit6" target="_blank" rel="noopener">github.com/Shununit6</a></li>
+          <li><span class="key">linkedin</span> <span class="p-sep">=</span> <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">linkedin.com/in/your-handle</a></li>
+        </ul>
+        <p class="hint"># reply within ~1 day</p>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Your Name</p>
+    <footer class="statusbar">
+      <span class="statusbar__seg statusbar__seg--mode">NORMAL</span>
+      <span class="statusbar__seg statusbar__seg--branch"> main*</span>
+      <span class="statusbar__seg statusbar__seg--path">~/your-name</span>
+      <span class="statusbar__spacer"></span>
+      <span class="statusbar__seg">utf-8</span>
+      <span class="statusbar__seg">© <span id="year"></span></span>
+      <span class="statusbar__seg statusbar__seg--clock" id="clock">--:--</span>
     </footer>
+
+    <div id="cmdk" class="cmdk" hidden aria-hidden="true">
+      <div class="cmdk__backdrop" data-close="1"></div>
+      <div class="cmdk__panel" role="dialog" aria-modal="true" aria-label="Command palette">
+        <div class="cmdk__input-row">
+          <span class="cmdk__chevron">❯</span>
+          <input id="cmdkInput" class="cmdk__input" placeholder="type a command or section…" autocomplete="off" spellcheck="false" />
+        </div>
+        <ul id="cmdkList" class="cmdk__list" role="listbox"></ul>
+        <div class="cmdk__footer">
+          <span><kbd>↑</kbd><kbd>↓</kbd> navigate</span>
+          <span><kbd>↵</kbd> select</span>
+          <span><kbd>esc</kbd> close</span>
+        </div>
+      </div>
+    </div>
 
     <script src="script.js"></script>
   </body>
