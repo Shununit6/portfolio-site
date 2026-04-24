@@ -15,7 +15,7 @@
   const year = document.getElementById('year');
   if (year) year.textContent = new Date().getFullYear();
 
-  const targets = document.querySelectorAll('.section, .hero, .card');
+  const targets = document.querySelectorAll('.feature, .hero, .entry');
   targets.forEach((el) => el.classList.add('reveal'));
 
   const io = new IntersectionObserver(
@@ -27,7 +27,7 @@
         }
       });
     },
-    { rootMargin: '0px 0px -10% 0px', threshold: 0.08 }
+    { rootMargin: '0px 0px -8% 0px', threshold: 0.05 }
   );
   targets.forEach((el) => io.observe(el));
 })();

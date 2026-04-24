@@ -3,122 +3,187 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
-    <meta name="theme-color" content="#0f1115" media="(prefers-color-scheme: dark)" />
-    <meta name="theme-color" content="#ffffff" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0e0d0b" media="(prefers-color-scheme: dark)" />
+    <meta name="theme-color" content="#f4f0e8" media="(prefers-color-scheme: light)" />
     <meta name="apple-mobile-web-app-capable" content="yes" />
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
     <meta name="mobile-web-app-capable" content="yes" />
     <meta name="format-detection" content="telephone=no" />
-    <title>Your Name — Portfolio</title>
+    <title>Your Name — Portfolio, 2026</title>
     <meta name="description" content="Personal portfolio of Your Name." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,500;0,9..144,700;1,9..144,300;1,9..144,500;1,9..144,700&family=Inter:wght@400;500;600&display=swap" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
-    <header class="nav">
-      <a class="nav__brand" href="#top">YN</a>
-      <nav class="nav__links">
+    <header class="masthead">
+      <a class="masthead__brand" href="#top">
+        <span class="masthead__mark">YN</span>
+        <span class="masthead__sep">/</span>
+        <span class="masthead__label">Portfolio, Vol. 1</span>
+      </a>
+      <nav class="masthead__nav">
         <a href="#about">About</a>
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
-      <button id="themeToggle" class="nav__theme" aria-label="Toggle theme">
-        <span class="nav__theme-icon">◐</span>
+      <button id="themeToggle" class="masthead__theme" aria-label="Toggle theme">
+        <span>◐</span>
       </button>
     </header>
 
     <main id="top">
       <section class="hero">
-        <p class="hero__eyebrow">Hello, I'm</p>
-        <h1 class="hero__name">Your Name</h1>
+        <div class="hero__meta">
+          <span class="small-caps">Issue 01</span>
+          <span class="hero__meta-dot">·</span>
+          <span class="small-caps">Portfolio / 2026</span>
+          <span class="hero__meta-dot">·</span>
+          <span class="small-caps">Engineering</span>
+        </div>
+        <h1 class="hero__name">
+          <span class="hero__given">Your</span>
+          <span class="hero__family"><em>Name</em></span>
+        </h1>
         <p class="hero__tagline">
-          Software engineer building
-          <span class="hero__accent">thoughtful, reliable</span> web apps.
+          Software engineer building <em>thoughtful,</em> <em>reliable</em> web apps — with an eye for the details and the patience to get them right.
         </p>
         <div class="hero__cta">
-          <a class="btn btn--primary" href="#projects">See my work</a>
-          <a class="btn btn--ghost" href="#contact">Get in touch</a>
+          <a class="link link--underline" href="#projects">Read the work ↓</a>
+          <span class="hero__sep">·</span>
+          <a class="link link--underline" href="#contact">Send a letter ↗</a>
         </div>
       </section>
 
-      <section id="about" class="section">
-        <h2 class="section__title">About</h2>
-        <div class="about">
-          <p>
-            I'm a developer who cares about the details — clean code, good UX,
-            and shipping things that actually work. Write a couple of
-            sentences here about what you do, what you're into, and what
-            you're looking for.
+      <hr class="rule" />
+
+      <section id="about" class="feature">
+        <header class="feature__header">
+          <p class="feature__num">01 / About</p>
+          <h2 class="feature__title">The maker</h2>
+        </header>
+        <div class="feature__body">
+          <p class="lead">
+            I'm a developer who cares about the details — <em>clean code, good UX, and shipping things that actually work.</em>
           </p>
-          <ul class="chips">
-            <li>JavaScript</li>
-            <li>TypeScript</li>
-            <li>React</li>
-            <li>Node.js</li>
-            <li>Python</li>
-            <li>PostgreSQL</li>
+          <p>
+            Write a couple of sentences here about what you do, what you're into, and what you're looking for. This is where you place the lead paragraph — something inviting, honest, with the shape of a first chapter rather than a résumé bullet.
+          </p>
+          <div class="tags">
+            <span class="small-caps tags__label">Stack</span>
+            <ul class="chips">
+              <li>JavaScript</li>
+              <li>TypeScript</li>
+              <li>React</li>
+              <li>Node.js</li>
+              <li>Python</li>
+              <li>PostgreSQL</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <hr class="rule" />
+
+      <section id="projects" class="feature">
+        <header class="feature__header">
+          <p class="feature__num">02 / Projects</p>
+          <h2 class="feature__title">Selected work</h2>
+        </header>
+
+        <ol class="entries">
+          <li class="entry">
+            <p class="entry__num">01</p>
+            <div class="entry__body">
+              <h3 class="entry__title">Project One</h3>
+              <p class="entry__dek">
+                Short description of what the project does and what problem it solves. One or two sentences is plenty — leave the reader wanting more.
+              </p>
+              <p class="entry__meta">
+                <span class="small-caps">Built with</span> React · Node · PostgreSQL
+              </p>
+              <p class="entry__links">
+                <a class="link link--underline" href="#">Live ↗</a>
+                <span class="entry__sep">·</span>
+                <a class="link link--underline" href="#">Code ↗</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="entry">
+            <p class="entry__num">02</p>
+            <div class="entry__body">
+              <h3 class="entry__title">Project Two</h3>
+              <p class="entry__dek">
+                Short description of what the project does and what problem it solves. One or two sentences is plenty — leave the reader wanting more.
+              </p>
+              <p class="entry__meta">
+                <span class="small-caps">Built with</span> TypeScript · Next.js
+              </p>
+              <p class="entry__links">
+                <a class="link link--underline" href="#">Live ↗</a>
+                <span class="entry__sep">·</span>
+                <a class="link link--underline" href="#">Code ↗</a>
+              </p>
+            </div>
+          </li>
+
+          <li class="entry">
+            <p class="entry__num">03</p>
+            <div class="entry__body">
+              <h3 class="entry__title">Project Three</h3>
+              <p class="entry__dek">
+                Short description of what the project does and what problem it solves. One or two sentences is plenty — leave the reader wanting more.
+              </p>
+              <p class="entry__meta">
+                <span class="small-caps">Built with</span> Python · FastAPI
+              </p>
+              <p class="entry__links">
+                <a class="link link--underline" href="#">Live ↗</a>
+                <span class="entry__sep">·</span>
+                <a class="link link--underline" href="#">Code ↗</a>
+              </p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <hr class="rule" />
+
+      <section id="contact" class="feature feature--contact">
+        <header class="feature__header">
+          <p class="feature__num">03 / Contact</p>
+          <h2 class="feature__title">Correspondence</h2>
+        </header>
+        <div class="feature__body">
+          <p class="lead">
+            The best way to reach me is by <em>email</em>.<br />I usually reply within a day.
+          </p>
+          <ul class="directory">
+            <li>
+              <span class="small-caps directory__label">Email</span>
+              <a class="link link--underline" href="mailto:shununit6@gmail.com">shununit6@gmail.com</a>
+            </li>
+            <li>
+              <span class="small-caps directory__label">GitHub</span>
+              <a class="link link--underline" href="https://github.com/Shununit6" target="_blank" rel="noopener">github.com/Shununit6</a>
+            </li>
+            <li>
+              <span class="small-caps directory__label">LinkedIn</span>
+              <a class="link link--underline" href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">linkedin.com/in/your-handle</a>
+            </li>
           </ul>
-        </div>
-      </section>
-
-      <section id="projects" class="section">
-        <h2 class="section__title">Projects</h2>
-        <div class="projects">
-          <article class="card">
-            <h3 class="card__title">Project One</h3>
-            <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
-            </p>
-            <p class="card__meta">React · Node · PostgreSQL</p>
-            <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Project Two</h3>
-            <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
-            </p>
-            <p class="card__meta">TypeScript · Next.js</p>
-            <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
-          </article>
-
-          <article class="card">
-            <h3 class="card__title">Project Three</h3>
-            <p class="card__body">
-              Short description of what the project does and what problem it
-              solves. One or two sentences is plenty.
-            </p>
-            <p class="card__meta">Python · FastAPI</p>
-            <div class="card__links">
-              <a href="#">Live</a>
-              <a href="#">Code</a>
-            </div>
-          </article>
-        </div>
-      </section>
-
-      <section id="contact" class="section section--contact">
-        <h2 class="section__title">Contact</h2>
-        <p class="contact__lead">
-          Best way to reach me is email. I usually reply within a day.
-        </p>
-        <div class="contact__links">
-          <a href="mailto:you@example.com">you@example.com</a>
-          <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
-          <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </section>
     </main>
 
-    <footer class="footer">
-      <p>© <span id="year"></span> Your Name</p>
+    <footer class="colophon">
+      <div class="colophon__row">
+        <p class="small-caps">© <span id="year"></span> · Your Name</p>
+        <p class="small-caps">Set in Fraunces &amp; Inter</p>
+        <p class="small-caps"><a href="#top">Back to top ↑</a></p>
+      </div>
     </footer>
 
     <script src="script.js"></script>
