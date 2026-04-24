@@ -478,6 +478,19 @@ main {
   * { scroll-behavior: auto !important; transition: none !important; animation: none !important; }
 }
 
+/* Touch / low-power: lighten glass + stop orb animation */
+@media (pointer: coarse), (max-width: 640px) {
+  .orb { animation: none; filter: blur(60px); opacity: 0.45; }
+  .nav,
+  .hero,
+  .about,
+  .contact-card,
+  .card {
+    backdrop-filter: blur(10px) saturate(140%);
+    -webkit-backdrop-filter: blur(10px) saturate(140%);
+  }
+}
+
 /* Mobile */
 @media (max-width: 640px) {
   .nav { margin-top: 12px; padding: 8px 10px 8px 12px; }
