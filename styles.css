@@ -56,7 +56,7 @@ body {
   font: 14px/1.7 var(--mono);
   overflow-x: hidden;
   -webkit-tap-highlight-color: transparent;
-  padding-bottom: 32px;
+  padding-bottom: calc(32px + env(safe-area-inset-bottom));
 }
 
 ::selection { background: var(--lavender); color: var(--crust); }
@@ -390,7 +390,7 @@ main {
   outline: none;
   color: var(--text);
   font-family: inherit;
-  font-size: 14px;
+  font-size: 16px;
 }
 .cmdk__input::placeholder { color: var(--muted); }
 .cmdk__list {
