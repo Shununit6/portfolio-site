@@ -11,6 +11,9 @@
     <meta name="format-detection" content="telephone=no" />
     <title>Your Name — Portfolio</title>
     <meta name="description" content="Personal portfolio of Your Name." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Press+Start+2P&family=VT323&display=swap" />
     <link rel="stylesheet" href="styles.css" />
   </head>
   <body>
@@ -21,6 +24,9 @@
         <a href="#projects">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
+      <button id="editToggle" class="nav__theme nav__edit" aria-label="Toggle edit mode" title="Edit mode">
+        <span>✎</span>
+      </button>
       <button id="themeToggle" class="nav__theme" aria-label="Toggle theme">
         <span class="nav__theme-icon">◐</span>
       </button>
@@ -110,8 +116,8 @@
           Best way to reach me is email. I usually reply within a day.
         </p>
         <div class="contact__links">
-          <a href="mailto:you@example.com">you@example.com</a>
-          <a href="https://github.com/your-handle" target="_blank" rel="noopener">GitHub</a>
+          <a href="mailto:shununit6@gmail.com">shununit6@gmail.com</a>
+          <a href="https://github.com/Shununit6" target="_blank" rel="noopener">GitHub</a>
           <a href="https://www.linkedin.com/in/your-handle" target="_blank" rel="noopener">LinkedIn</a>
         </div>
       </section>
@@ -120,6 +126,14 @@
     <footer class="footer">
       <p>© <span id="year"></span> Your Name</p>
     </footer>
+
+    <aside id="editor" class="editor" hidden>
+      <div class="editor__header">
+        <span class="editor__title">EDIT PANEL</span>
+        <button id="editorClose" class="editor__close" aria-label="Close">×</button>
+      </div>
+      <div id="editorBody" class="editor__body"></div>
+    </aside>
 
     <script src="script.js"></script>
   </body>
